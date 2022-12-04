@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: ;
+}
+h1 {
+  display: inline-block;
+  margin: 100px 0;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: pink;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  /*  border: 1px solid black;*/
+  transition: 0.3s width, 0.3s height 0.3s, 0.3s background 0.3s, 1s transform;
+}
+.size {
+  width: 150px;
+  height: 150px;
+}
+.caption {
+  transform: rotate(45deg);
+}
+.box:hover {
+  cursor: pointer;
+}
+
+/*lingkaran*/
+.lbox,
+.rbox {
+  display: none;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: white;
+  border-radius: 50%;
+  transition: 3s background 0.3s, 3s display 0.3s, 1s top, 1s left;
+  top: 0;
+  left: 0;
+}
+.lbox {
+  z-index: -1;
+  /*top-75px*/
+}
+.rbox {
+  z-index: -2;
+  /*left -75 px */
+}
+/*animasi lingkaran */
+.dbox {
+  display: block;
+  background: pink;
+}
+.kibox {
+  top: -75px;
+  left: 0;
+}
+.kabox {
+  top: 0;
+  left: -75px;
+}
+/*
+.lbox,
+.rbox,
+.box {
+  border: 1px solid black;
+  color: white;
+}
+*/
